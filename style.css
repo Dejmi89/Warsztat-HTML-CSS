@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+.container {
+    width: 80%;
+    margin:auto;
+}
+#logo {
+    float:left;
+}
+
+.highlight {}
