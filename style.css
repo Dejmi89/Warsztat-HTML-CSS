@@ -6,7 +6,12 @@
 
 .container {
     width: 85%;
-    margin:auto;
+    margin:0 auto;
+}
+
+.container2 {
+    width:100%;
+    background-color: rgb(241,241,241);
 }
 .container_empty {
     width: 85%;
@@ -18,23 +23,11 @@ header {
     color:white;
 }
 
-a {
-    text-decoration: none;
-    color:white;
-}
-
-
 #logo {
     float:left;
     margin: 10px;
 }
-#logo2 {
-    float:right;
-    margin: 10px;
-}
-#header_info {
 
-}
 #header_info h1 {
     padding-top: 70px;
 }
@@ -45,6 +38,63 @@ a {
     line-height: 20px;
 
 }
+
+/*NAVBAR with DROPDOWN MENU*/
+.dropdown{
+    float:left;
+    display:block;
+}
+
+.dropdown_button {
+
+}
+
+.dropdown_content{
+    line-height: 30px;
+    position:absolute;
+    z-index:1;
+    top:80px;
+    width:100px;
+    height:100px;
+    background-color: black;
+    display:none;
+    text-align: left;
+    padding:5px;
+
+}
+
+/*.dropdown_content::before{
+    content:'';
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom:40px solid red;
+    position:absolute;
+}*/
+
+#triangle {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom:30px solid black;
+    z-index:1;
+    position:absolute;
+    top:65px;
+    right:410px;
+    display:none;
+}
+.dropdown:hover .dropdown_content {
+    display:block;
+}
+.dropdown:hover #triangle{
+    display:block;
+}
+.dropdown_content a:hover {
+    color: rgb(0,196,162);
+}
+
 header nav {
     float:right;
     margin:10px;
@@ -54,9 +104,17 @@ header li {
     float:left;
     display: inline;
     padding:10px;
+    font-weight: 600;
 }
+a {
+    text-decoration: none;
+    color:white;
+}
+
+/*------------------------*/
+
 .highlight {
-    color:#4EEE94;
+    color:rgb(0,196,162);
 }
 
 .showcase {
@@ -64,8 +122,8 @@ header li {
     height:670px;
 }
 
-#strzalka1 {
-    color:#4EEE94;
+#arrow1 {
+    color:rgb(0,196,162);
     float:left;
     font-size: 80px;
     margin-top: 120px;
@@ -73,8 +131,9 @@ header li {
 
 /* to mozna zrobic before/after - wyprobowac*/
 
-#strzalka2 {
-    color: #4EEE94;
+
+#arrow2 {
+    color: rgb(0,196,162);
     float:right;
     font-size: 80px;
     margin-top: 120px;
@@ -99,16 +158,19 @@ header li {
 }
 button {
     margin-top: 30px;
-    background-color: #4EEE94;
+    background-color: rgb(0,196,162);
     color:#FFFFFF;
     padding:20px;
     border-radius: 5px;
     box-shadow: none;
+    font-size: 1.7em;
+    width: 40%;
 }
 
 .boxes {
     margin:auto;
     margin-top: 35px;
+    margin-bottom: 100px;
 }
 .boxes #box1{
 
@@ -161,30 +223,369 @@ button {
 .opacity h3{
     text-align: left;
     font-weight: 500;
+    padding:10px;
 
 }
 .underline {
     width: 40%;
-    height:10%;
-    background-color: #4EEE94;
+    height:8px;
+    background-color: rgb(0,196,162);
     margin-left:10px;
 }
 
+
+h5 {
+    margin-top: 20px;
+
+}
+
+
+/* PRICES */
+
+.plans_prices {
+    background-color: rgb(241,241,241);
+}
+
+.plans_prices > .small_ring{
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    background-color: white;
+    position:absolute;
+    left: 400px;
+    top: 1345px;
+    z-index: 1;
+    border: 1px solid grey;
+}
+
+
+
+.small_ring2{
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    background-color: white;
+    position:absolute;
+    left: 977px;
+    top: 1345px;
+    z-index: 1;
+    border: 1px solid grey;
+}
+.small_ring3{
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    background-color: white;
+    position:absolute;
+    right: 443px;
+    top: 1345px;
+    z-index: 1;
+    border: 1px solid grey;
+}
+.plan {
+    box-sizing: border-box;
+    position:relative;
+    float:left;
+    width:30%;
+    border: 1px solid grey;
+    height:600px;
+    margin: 100px 50px 50px 5px;
+    background-color: rgb(249,249,249);
+    overflow: hidden;
+
+}
+
+.plan_title{
+    width:100%;
+    position:absolute;
+    top:40px;
+    left:180px;
+}
+.plan_font {
+    font-size: 1.4em;
+    color: rgb(0,196,162);
+}
+.plan_font_2{
+    font-size: 1.4em;
+    color: rgb(130,130,130);
+}
+.price_ring {
+    height: 160px;
+    width:160px;
+    background-color: white;
+    border-radius: 50%;
+    border:1px solid grey;
+    position:absolute;
+    top:150px;
+    left: 190px;
+}
+
+.price_ring p {
+    padding: 0px;
+    font-size: 1.7em;
+    position:absolute;
+    top:40px;
+    left:16px;
+}
+
+/*.small_ring {
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    background-color: white;
+    position:absolute;
+    left: 240px;
+    top: -50px;
+    z-index: 1;
+    border: 1px solid grey;
+}*/
+.smaller_ring {
+    position:absolute;
+    left:16px;
+    top:15px;
+    width:50%;
+    height:30px;
+    border-radius: 50%;
+    background-color: rgb(193,193,193);
+
+}
+
+.plan_info {
+    position:relative;
+    top:340px;
+    height:220px;
+    margin:auto;
+}
+.mini_container_grey {
+    width:100%;
+    height:35px;
+    box-sizing: border-box;
+    position:relative;
+    text-align: center;
+    background-color: rgb(227,227,227);
+    font-size: 1.6em;
+    color:rgb(130,130,130);
+}
+.mini_container_lightgrey {
+    width:100%;
+    height:35px;
+    box-sizing: border-box;
+    position:relative;
+    text-align: center;
+    background-color: rgb(241,241,241);
+    font-size: 1.6em;
+    color: rgb(130,130,130);
+
+
+}
+.mini_container_white {
+    width:100%;
+    height:35px;
+    box-sizing: border-box;
+    position:relative;
+    text-align: center;
+    background-color: white;
+    font-size: 1.6em;
+    color:rgb(130,130,130);
+}
+
+.button_price {
+    background-color: rgb(0,196,162);
+    color:#FFFFFF;
+    padding:10px;
+    box-shadow: none;
+    position:relative;
+    left: 188px;
+    top:250px;
+    width:30%;
+    border-radius: 11%;
+    font-size: 1.3em;
+
+}
+
+#box3 h3 {
+    text-align: left;
+    padding: 10px 0 5px 10px;
+}
+
+#box3 p {
+    padding-top:10px;
+}
+.container > h3{
+    margin-left:5px;
+    padding-top: 45px;
+}
+
+.container > .underline {
+    width: 20%;
+    height:8px;
+    background-color: rgb(0,196,162);
+    margin-left:5px;
+    margin-top: 9px;
+}
+/*CONTACT BOX*/
+
+.contact_left {
+    float:left;
+    width:60%;
+    box-sizing: border-box;
+}
+.contact_right {
+    position:relative;
+    float:left;
+    width:30%;
+    box-sizing: border-box;
+    overflow: hidden;
+    height:500px;
+}
+#red_armchair {
+    background-image: url("img/red_chair.png");
+    background-repeat:no-repeat;
+    background-position: center;
+    width:300px;
+    height:300px;
+    margin:auto;
+}
+.button_contact {
+    width:100%;
+    border-radius: 15px;
+    display: block;
+    font-size: 1.5em;
+    margin-top:95px;
+}
+
+form{
+    box-sizing: border-box;
+    margin-top: 30px;
+}
+input[type=text] {
+    border:2px solid rgb(0,196,162);
+    display: block;
+    width:85%;
+    height:55px;
+    margin-top:25px;
+    font-size: 2em;
+    color:rgb(157,157,157);
+    padding-left:10px;
+}
+input[type=email] {
+    display: block;
+    width:85%;
+    border:2px solid rgb(0,196,162);
+    height:55px;
+    margin-top:25px;
+    font-size: 2em;
+    color:rgb(157,157,157);
+    padding-left:10px;
+}
+
+textarea{
+    width:85%;
+    height:233px;
+    resize:none;
+    border:2px solid rgb(0,196,162);
+    overflow: auto;
+    margin-top:25px;
+    font-size: 2em;
+    color:rgb(157,157,157);
+    padding-left:10px;
+    padding-top:10px;
+}
+
+/*CHECKBOX - jsfiddle.net/v2jcodpp*/
+
+#checkbox{
+    background-color: #ffffff;
+    width:50px;
+    height: 50px;
+    position:absolute;
+    left:30px;
+    z-index: 1;
+    border: 2px solid rgb(0,196,162);
+    overflow: hidden;
+}
+
+#checkmark {
+    width: 20px;
+    height:40px;
+    border:solid rgb(0,196,162);
+    transform: rotate(45deg);
+    border-width: 0 5px 5px 0;
+    position: absolute;
+    z-index: 1;
+    left:13px;
+}
+
+.personal_data{
+    width:80%;
+    height:15%;
+    float:right;
+    font-size:1.5em;
+    color:rgb(218,218,218);
+
+}
+/*------------------------------*/
+
+/*FOOTER*/
+
+#logo2 {
+    box-sizing: border-box;
+    float:right;
+    margin: 10px;
+}
+
+.social_media{
+    overflow: hidden;
+    box-sizing: border-box;
+    width:30%;
+    height:100px;
+    margin-top: 60px;
+    float:right;
+}
+
 footer {
-    color:grey;
+    color:lightgrey;
     background-color:#FFFFFF;
 }
 
-.social_media {
-    float:right;
-}
-h5 {
-    margin-top: 20px;
-}
-h3 {
-
-    padding:10px;
+.all_in_grey {
+    color:rgb(157,157,157);
 }
 
+#flickr {
+    background-image: url("img/flickr.png");
+    width:9%;
+    height:47%;
+    background-size: cover;
+    float:left;
+}
 
-/*CHECKBOX - jsfiddle.net/v2jcodpp*/
+#twitter {
+    background-image: url("img/twitter.png");
+    width:9%;
+    height:47%;
+    background-size: cover;
+    float:left;
+}
+
+#vimeo {
+    background-image: url("img/vimeo.png");
+    width:9%;
+    height:47%;
+    background-size: cover;
+    float:left;
+}
+#pinterest {
+    background-image: url("img/pinterest.png");
+    background-size: cover;
+    float:left;
+    width:9%;
+    height:47%;
+}
+
+.heading {
+    width:30%;
+    height:100px;
+    display:inline-block;
+    padding-top:50px;
+}
