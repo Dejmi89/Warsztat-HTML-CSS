@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
     overflow: auto;
+    font-family: 'Lato', sans-serif;
 }
+
+
 
 .container {
     width: 85%;
@@ -30,12 +33,14 @@ header {
 
 #header_info h1 {
     padding-top: 70px;
+    font-size: 2.8em;
+    color:black;
 }
 
 #header_info p{
     padding-top: 30px;
     font-size: 17px;
-    line-height: 20px;
+    line-height: 25px;
 
 }
 
@@ -45,9 +50,14 @@ header {
     display:block;
 }
 
-.dropdown_button {
-
-}
+/*#dropdown_empty {*/
+    /*background-color: #7db9e8;*/
+    /*width:109px;*/
+    /*height:30px;*/
+    /*position:absolute;*/
+    /*top:56px;*/
+    /*opacity: 100%;*/
+/*}*/
 
 .dropdown_content{
     line-height: 30px;
@@ -82,7 +92,7 @@ header {
     z-index:1;
     position:absolute;
     top:65px;
-    right:410px;
+    right:380px;
     display:none;
 }
 .dropdown:hover .dropdown_content {
@@ -118,14 +128,19 @@ a {
 }
 
 .showcase {
-    background-color: white;
+
     height:670px;
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgb(255,255,255) 0%, rgb(229,229,229) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgb(255,255,255) 0%,rgb(229,229,229) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgb(255,255,255) 0%,rgb(229,229,229) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
 }
 
 #arrow1 {
     color:rgb(0,196,162);
     float:left;
-    font-size: 80px;
+    font-size: 115px;
     margin-top: 120px;
 }
 
@@ -135,7 +150,7 @@ a {
 #arrow2 {
     color: rgb(0,196,162);
     float:right;
-    font-size: 80px;
+    font-size: 115px;
     margin-top: 120px;
 }
 #img_chair {
@@ -161,7 +176,7 @@ button {
     background-color: rgb(0,196,162);
     color:#FFFFFF;
     padding:20px;
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: none;
     font-size: 1.7em;
     width: 40%;
@@ -236,6 +251,7 @@ button {
 
 h5 {
     margin-top: 20px;
+    font-size: 1.2em;
 
 }
 
@@ -295,6 +311,110 @@ h5 {
 
 }
 
+.plan2 {
+    box-sizing: border-box;
+    position:relative;
+    float:left;
+    width:30%;
+    border: 1px solid grey;
+    height:600px;
+    margin: 100px 50px 50px 5px;
+    background-color: rgb(249,249,249);
+    overflow: hidden;
+
+}
+.plan2:hover {
+    box-sizing: border-box;
+    position:relative;
+    float:left;
+    width:30%;
+    border: 5px solid rgb(0,196,162);
+    height:600px;
+    margin: 100px 50px 50px 5px;
+    background-color:rgb(0,196,162);
+    overflow: hidden;
+}
+.plan2:hover .plan_font_2{
+    font-size: 1.6em;
+    color: white;
+}
+
+
+.plan2:hover .price_ring{
+    height: 160px;
+    width:160px;
+    background-color: white;
+    border-radius: 50%;
+    border:1px solid white;
+    position:absolute;
+    top:150px;
+    left: 190px;
+    color:rgb(0,196,162);
+}
+.plan2:hover .button_price{
+    background-color: white;
+    color:rgb(0,196,162);
+    padding:10px;
+    box-shadow: none;
+    position:relative;
+    left: 188px;
+    top:250px;
+    width:30%;
+    border-radius: 11%;
+    font-size: 1.3em;
+}
+
+.plan:hover .price_ring p{
+    color:rgb(0,196,162);
+}
+.plan2:hover .price_ring p{
+    color:rgb(0,196,162);
+}
+.plan:hover {
+    box-sizing: border-box;
+    position:relative;
+    float:left;
+    width:30%;
+    border: 5px solid rgb(0,196,162);
+    height:600px;
+    margin: 100px 50px 50px 5px;
+    background-color:rgb(0,196,162);
+    overflow: hidden;
+}
+
+.plan:hover .plan_font{
+    font-size: 1.6em;
+    color: white;
+}
+
+
+.plan:hover .price_ring{
+    height: 160px;
+    width:160px;
+    background-color: white;
+    border-radius: 50%;
+    border:1px solid white;
+    position:absolute;
+    top:150px;
+    left: 190px;
+}
+.plan:hover .button_price{
+    background-color: white;
+    color:rgb(0,196,162);
+    padding:10px;
+    box-shadow: none;
+    position:relative;
+    left: 188px;
+    top:250px;
+    width:30%;
+    border-radius: 11%;
+    font-size: 1.3em;
+}
+
+.plan:hover .price_ring p{
+    color:rgb(0,196,162);
+}
+
 .plan_title{
     width:100%;
     position:absolute;
@@ -302,12 +422,13 @@ h5 {
     left:180px;
 }
 .plan_font {
-    font-size: 1.4em;
+    font-size: 1.6em;
     color: rgb(0,196,162);
 }
 .plan_font_2{
-    font-size: 1.4em;
+    font-size: 1.6em;
     color: rgb(130,130,130);
+
 }
 .price_ring {
     height: 160px;
@@ -318,14 +439,17 @@ h5 {
     position:absolute;
     top:150px;
     left: 190px;
+
 }
 
 .price_ring p {
     padding: 0px;
-    font-size: 1.7em;
+    font-size: 1.8em;
     position:absolute;
     top:40px;
-    left:16px;
+    color:rgb(130,130,130);
+    text-align: center;
+
 }
 
 /*.small_ring {
@@ -584,7 +708,7 @@ footer {
 }
 
 .heading {
-    width:30%;
+    width:33%;
     height:100px;
     display:inline-block;
     padding-top:50px;
