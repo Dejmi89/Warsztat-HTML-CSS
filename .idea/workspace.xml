@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80a4fe33-0ea2-4a1d-8706-d0021701a795" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/black_chair.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/box1_img.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/box2_img.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/flickr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/form_ok.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/pinterest.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/red_chair.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/twitter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/vimeo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/warsztaty.html" afterPath="$PROJECT_DIR$/warsztaty.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/partials/_showcase.scss" afterPath="$PROJECT_DIR$/sass/partials/_showcase.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -90,8 +80,8 @@
       <file leaf-file-name="_showcase.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sass/partials/_showcase.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+            <state relative-caret-position="144">
+              <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -288,12 +278,12 @@
       <workItem from="1522085547069" duration="3243000" />
       <workItem from="1522165826625" duration="51000" />
       <workItem from="1522167242191" duration="14495000" />
-      <workItem from="1522255257843" duration="11943000" />
+      <workItem from="1522255257843" duration="12113000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45788000" />
+    <option name="totallyTimeSpent" value="45958000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="533" y="72" width="1682" height="732" extended-state="0" />
@@ -674,8 +664,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/partials/_showcase.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        <state relative-caret-position="144">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding />
         </state>
       </provider>
