@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>Sit On Chair</title>
     <link href="style.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src = "js.js"></script>
 
 </head>
 <body>
@@ -15,40 +17,104 @@
                     <h2>SIT <span class="highlight">ON</span> CHAIR</h2>
                 </div>
                 <nav>
-                    <ul>
-                        <div class="dropdown">
-                            <div class="dropdown_button">
-                                <li><a link href="#">O FIRMIE</a></li>
+                    <ul class="menu">
+                        <li><a href="#"></a>Item 1</li>
+                            <div class = "wrapper">
+                                <div class = "triangle"></div>
+                                <div class="submenu">
+                                    <ul>
+                                        <li>Aktualnosci</li>
+                                        <li>Nasz team</li>
+                                        <li>Historia</li>
+                                    </ul>
+                                </div>
                             </div>
+                        <li><a href="#"></a>Item 2</li>
+                        <li><a href="#"></a>Item 3</li>
+                     </ul>
 
-                            <div id="triangle"></div>
-                            <div class="dropdown_content">
-                                <a link href="#">Aktualnosci</a>
-                                <a link href="#">Nasz team</a>
-                                <a link href="#">Historia</a>
-                            </div>
+                    <!--TAK BYLO-->
+                        <!--<div class="dropdown_menu">-->
+                            <!--<div class="dropdown_submenu">-->
+                                <!--<li><a link href="#">O FIRMIE</a></li>-->
+                            <!--</div>-->
 
-                        </div>
-                        <li><a link href="" class="dropdown">GALERIA</a></li>
-                        <li><a link href="" class="dropdown">KONTAKT</a></li>
-                    </ul>
+                            <!--<div id="triangle"></div>-->
+                            <!--<div class="dropdown_content">-->
+                                <!--<a link href="#">Aktualnosci</a>-->
+                                <!--<a link href="#">Nasz team</a>-->
+                                <!--<a link href="#">Historia</a>-->
+                            <!--</div>-->
+
+                        <!--</div>-->
+                        <!--<li><a link href="" class="dropdown">GALERIA</a></li>-->
+                        <!--<li><a link href="" class="dropdown">KONTAKT</a></li>-->
+
                 </nav>
             </div>
             <div class="showcase">
                 <div class="container_empty"></div>
-                    <div class="container">
-                        <div id="arrow1"> < </div>
-                        <div id="arrow2"> > </div>
-                        <div id="img_chair"></div>
-                        <div id="header_info">
-                            <h1>SIT<span class="highlight"> ON</span> OUR<span class="highlight"> CHAIR</span></h1>
-                            <p>Nulla facilisi. Sed massa velit, elementum molestie orci a, tempor accumsan risus. Sed suscipit, ligula sit amet lobortis laoreet, turpis ex molestie tortor, sed varius felis diam in lectus. Etiam et purus augue. Nulla tincidunt bibendum mauris in cursus. Phasellus ac est tellus. Pellentesque gravida enim nec sem tincidunt vestibulum in non tortor. Etiam eget suscipit diam, eget consequat metus. Vestibulum eget congue ipsum, ut dapibus mi. Mauris id elit pharetra, efficitur velit quis, dignissim est. </p>
-                            <button> ZOBACZ WIĘCEJ </button>
+                <div class="slider"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-1">
+                            <div id="arrow1"> < </div>
                         </div>
+                        <div class="col-5">
+                            <img src="img/black_chair.png" id = img_chair />
+                        </div>
+                        <div class="col-5">
+                            <div class="row">
+                                <div class="col-12"><h1>SIT<span class="highlight"> ON </span> OUR <span class="highlight">CHAIR</span></h1></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque.</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12"><button>ZOBACZ WIECEJ</button></div>
+                            </div>
+                        </div>
+                        <div class="col-1">
+                            <div id="arrow2"> > </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+            </div>
 
-                    </div>
-                    </div>
-        </header>
+            <!--SLIDER-->
+            <!--<div class="gallery_wrapper">-->
+                <!--<div class="slides">-->
+                    <!--<div class="slide slide1">1</div>-->
+                    <!--<div class="slide slide2">2</div>-->
+                    <!--<div class="slide slide3">3</div>-->
+                <!--</div>-->
+
+            <!--</div>-->
+
+
+            <!--TAK BYLO WCZESNIEJ-->
+            <!--<div class="container_empty"></div>-->
+            <!--<div class="container">-->
+                <!--<ul class="slider">-->
+                    <!--<li><img src="img/black_chair.png"/></li>-->
+                    <!--<li><img src="img/box1_img.jpg"/></li>-->
+                    <!--<li><img src="img/box2_img.jpg"/></li>-->
+                <!--</ul>-->
+                <!--<div id="arrow1"> < </div>-->
+                <!--<div id="arrow2"> > </div>-->
+
+
+                <!--<div id="header_info">-->
+                    <!--<h1>SIT<span class="highlight"> ON</span> OUR<span class="highlight"> CHAIR</span></h1>-->
+                    <!--<p>Nulla facilisi. Sed massa velit, elementum molestie orci a, tempor accumsan risus. Sed suscipit, ligula sit amet lobortis laoreet, turpis ex molestie tortor, sed varius felis diam in lectus. Etiam et purus augue. Nulla tincidunt bibendum mauris in cursus. Phasellus ac est tellus. Pellentesque gravida enim nec sem tincidunt vestibulum in non tortor. Etiam eget suscipit diam, eget consequat metus. Vestibulum eget congue ipsum, ut dapibus mi. Mauris id elit pharetra, efficitur velit quis, dignissim est. </p>-->
+                    <!--<button> ZOBACZ WIĘCEJ </button>-->
+                <!--</div>-->
+
+            <!--</div>-->
+        <!--</header>-->
 
         <section class="boxes">
             <div class="container">
@@ -73,71 +139,144 @@
             </div>
         </section>
 
-        <section class="container2">
-            <div class="container">
-                <h3>CENNIK</h3>
-                <div class="underline"></div>
-                <div class="plans_prices">
+            <section class="prices">
+                <!--<div class="container">-->
+                    <!--<div class="row">-->
+                        <!--<div class = "col-4"></div>-->
+                        <!--<div class = "col-4"></div>-->
+                        <!--<div class = "col-4"></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="col-12">BASIC PLAN</div>
+                            <div class="col-12">
+                                <div class="col-6">
+                                    <div class="col-12">85,99</div>
+                                    <div class="col-12">PLN / EUR</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="col-12">Zakup towaru + dowóz</div>
+                                <div class="col-12">Serwis</div>
+                            </div>
+                            <div class="col-12">
+                                <button>DOŁĄCZ</button>
+                            </div>
+                        </div>
 
 
-                    <div class="small_ring">
-                        <div class="smaller_ring"></div>
-                    </div>
-                    <div class="plan">
-                        <div class="plan_title">
-                            <p><span class="plan_font">BASIC PLAN</span></p>
+                        <div class="col-4">
+                            <div class="col-12">STANDARD PLAN</div>
+                            <div class="col-12">
+                                <div class="col-6">
+                                    <div class="col-12">95</div>
+                                    <div class="col-12">PLN / EUR</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="col-12">Zakup towaru + dowóz</div>
+                                <div class="col-12">Serwis</div>
+                                <div class="col-12">Gwarancja 5 lat</div>
+                            </div>
+
+                            <div class="col-12">
+                                <button>DOŁĄCZ</button>
+                            </div>
                         </div>
-                        <div class="price_ring">
-                            <p>85,99 PLN/MSC</p>
-                        </div>
-                        <div class="plan_info">
-                            <div class="mini_container_grey">Zakup towaru + dowóz</div>
-                            <div class="mini_container_lightgrey">Serwis</div>
-                        </div>
-                        <button class="button_price">DOŁĄCZ</button>
-                    </div>
 
 
-                    <div class="small_ring2">
-                        <div class="smaller_ring"></div>
-                    </div>
-                    <div class="plan2">
-                        <div class="plan_title">
-                            <p><span class="plan_font_2">STANDARD PLAN</span></p>
-                        </div>
-                        <div class="price_ring">
-                            <p>95,99 PLN/MSC</p>
-                        </div>
-                        <div class="plan_info">
-                            <div class="mini_container_white">Zakup towaru + dowóz</div>
-                            <div class="mini_container_lightgrey">Serwis</div>
-                            <div class="mini_container_white">Gwarancja 5 lat</div>
-                        </div>
-                        <button class="button_price">DOŁĄCZ</button>
-                    </div>
+                        <div class="col-4">
+                            <div class="col-12">ADVANCED PLAN</div>
+                            <div class="col-12">
+                                <div class="col-6">
+                                    <div class="col-12">211</div>
+                                    <div class="col-12">PLN / EUR</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="col-12">Zakup towaru + dowóz</div>
+                                <div class="col-12">Serwis</div>
+                                <div class="col-12">Gwarancja 5 lat</div>
+                                <div class="col-12">Porady projektanta</div>
+                            </div>
 
-
-                    <div class="small_ring3">
-                        <div class="smaller_ring"></div>
-                    </div>
-                    <div class="plan">
-                        <div class="plan_title">
-                            <p><span class="plan_font">ADVANCED PLAN</span></p>
+                            <div class="col-12">
+                                <button>DOŁĄCZ</button>
+                            </div>
                         </div>
-                        <div class="price_ring">
-                            <p>211,00 PLN/MSC</p>
-                        </div>
-                        <div class="plan_info">
-                            <div class="mini_container_grey">Zakup towaru + dowóz</div>
-                            <div class="mini_container_lightgrey">Serwis</div>
-                            <div class="mini_container_grey">Gwarancja 6 lat</div>
-                            <div class="mini_container_lightgrey">Porady projektanta</div>
-                        </div>
-                        <button class="button_price">DOŁĄCZ</button>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+
+            <!--PRICE LIST - TAK BYLO-->
+        <!--<section class="container2">-->
+            <!--<div class="container">-->
+                <!--<h3>CENNIK</h3>-->
+                <!--<div class="underline"></div>-->
+                <!--<div class="plans_prices">-->
+
+
+                    <!--<div class="small_ring">-->
+                        <!--<div class="smaller_ring"></div>-->
+                    <!--</div>-->
+                    <!--<div class="plan">-->
+                        <!--<div class="plan_title">-->
+                            <!--<p><span class="plan_font">BASIC PLAN</span></p>-->
+                        <!--</div>-->
+                        <!--<div class="price_ring">-->
+                            <!--<p>85,99 PLN/MSC</p>-->
+                        <!--</div>-->
+                        <!--<div class="plan_info">-->
+                            <!--<div class="mini_container_grey">Zakup towaru + dowóz</div>-->
+                            <!--<div class="mini_container_lightgrey">Serwis</div>-->
+                        <!--</div>-->
+                        <!--<button class="button_price">DOŁĄCZ</button>-->
+                    <!--</div>-->
+
+
+                    <!--<div class="small_ring2">-->
+                        <!--<div class="smaller_ring"></div>-->
+                    <!--</div>-->
+                    <!--<div class="plan2">-->
+                        <!--<div class="plan_title">-->
+                            <!--<p><span class="plan_font_2">STANDARD PLAN</span></p>-->
+                        <!--</div>-->
+                        <!--<div class="price_ring">-->
+                            <!--<p>95,99 PLN/MSC</p>-->
+                        <!--</div>-->
+                        <!--<div class="plan_info">-->
+                            <!--<div class="mini_container_white">Zakup towaru + dowóz</div>-->
+                            <!--<div class="mini_container_lightgrey">Serwis</div>-->
+                            <!--<div class="mini_container_white">Gwarancja 5 lat</div>-->
+                        <!--</div>-->
+                        <!--<button class="button_price">DOŁĄCZ</button>-->
+                    <!--</div>-->
+
+
+                    <!--<div class="small_ring3">-->
+                        <!--<div class="smaller_ring"></div>-->
+                    <!--</div>-->
+                    <!--<div class="plan">-->
+                        <!--<div class="plan_title">-->
+                            <!--<p><span class="plan_font">ADVANCED PLAN</span></p>-->
+                        <!--</div>-->
+                        <!--<div class="price_ring">-->
+                            <!--<p>211,00 PLN/MSC</p>-->
+                        <!--</div>-->
+                        <!--<div class="plan_info">-->
+                            <!--<div class="mini_container_grey">Zakup towaru + dowóz</div>-->
+                            <!--<div class="mini_container_lightgrey">Serwis</div>-->
+                            <!--<div class="mini_container_grey">Gwarancja 6 lat</div>-->
+                            <!--<div class="mini_container_lightgrey">Porady projektanta</div>-->
+                        <!--</div>-->
+                        <!--<button class="button_price">DOŁĄCZ</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</section>-->
 
         <section class="container">
             <h3>KONTAKT</h3>
