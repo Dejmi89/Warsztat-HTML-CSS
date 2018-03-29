@@ -1,29 +1,50 @@
-.showcase{
-  h1{
+.showcase {
+  height: 800px;
+  h1 {
     color: #000;
+    overflow: hidden;
   }
-  .container_empty{
+
+  .slider {
 
   }
-  .slider{
-    
-  }
-  .container{
+  .container {
 
-    .row{
+    .row {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
 
-      .col-1:first-of-type{
-
+      .col-1:first-of-type {
+        display: flex;
+        align-items: center;
       }
-      .col-5:first-of-type{
+      .col-5:nth-of-type(2){
         overflow: hidden;
-      }
-      .col-5:last-of-type{
 
+      }
+      .col-5:nth-of-type(3){
+        color:#000;
+        line-height: 1.8em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .row {
+          text-align: center;
+          width:80%;
+          display: flex;
+          justify-content: center;
+        }
       }
       .col-1:last-of-type{
+        display: flex;
+        justify-content: center;
 
+        #arrow2 {
+          align-self: center;
+        }
       }
     }
+
   }
 }

@@ -1,8 +1,33 @@
-.showcase h1 {
-  color: #000; }
-
-.showcase .container .row .col-5:first-of-type {
-  overflow: hidden; }
+.showcase {
+  height: 800px; }
+  .showcase h1 {
+    color: #000;
+    overflow: hidden; }
+  .showcase .container .row {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center; }
+    .showcase .container .row .col-1:first-of-type {
+      display: flex;
+      align-items: center; }
+    .showcase .container .row .col-5:nth-of-type(2) {
+      overflow: hidden; }
+    .showcase .container .row .col-5:nth-of-type(3) {
+      color: #000;
+      line-height: 1.8em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+      .showcase .container .row .col-5:nth-of-type(3) .row {
+        text-align: center;
+        width: 80%;
+        display: flex;
+        justify-content: center; }
+    .showcase .container .row .col-1:last-of-type {
+      display: flex;
+      justify-content: center; }
+      .showcase .container .row .col-1:last-of-type #arrow2 {
+        align-self: center; }
 
 .prices {
   overflow: hidden;

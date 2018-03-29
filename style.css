@@ -3,7 +3,7 @@
     padding: 0;
     overflow: auto;
     font-family: 'Lato', sans-serif;
-    color:white;
+
 }
 
 /*GRID*/
@@ -230,7 +230,7 @@ a {
     color:rgb(0,196,162);
     float:left;
     font-size: 115px;
-    margin-top: 120px;
+    overflow: hidden;
 }
 
 /* to mozna zrobic before/after - wyprobowac*/
@@ -240,7 +240,8 @@ a {
     color: rgb(0,196,162);
     float:right;
     font-size: 115px;
-    margin-top: 120px;
+    overflow: hidden;
+
 }
 /*------------------------------------------------SLIDER---------------------------------------------------*/
 .gallery_wrapper {
@@ -325,6 +326,7 @@ button {
     margin:auto;
     margin-top: 35px;
     margin-bottom: 100px;
+
 }
 .boxes #box1{
 
@@ -338,6 +340,9 @@ button {
     background-repeat: no-repeat;
     height:300px;
     background-position: center;
+
+
+
 }
 
 .boxes #box2{
@@ -366,6 +371,7 @@ button {
     margin:5px;
     height:300px;
     color:grey;
+    overflow: hidden;
 }
 .opacity {
     margin:auto;
@@ -385,6 +391,7 @@ button {
     height:8px;
     background-color: rgb(0,196,162);
     margin-left:10px;
+
 }
 
 
