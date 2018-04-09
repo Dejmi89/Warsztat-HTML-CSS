@@ -2,7 +2,9 @@ header .container .row {
   display: flex;
   flex-wrap: nowrap; }
   header .container .row .col-3 {
-    overflow: hidden; }
+    overflow: hidden;
+    display: flex;
+    justify-content: center; }
 
 .showcase {
   height: 800px;
