@@ -2,20 +2,20 @@ document.addEventListener('DOMContentLoaded', function(){
 
     //Zadanie 1
 
-    var menu = document.querySelector('.menu');
-    var submenu = document.querySelector('.submenu');
-    var triangle = document.querySelector('.triangle');
-
-
-    menu.addEventListener('mouseenter', function () {
-        submenu.classList.add('block');
-        triangle.classList.add('block');
-    });
-
-    submenu.addEventListener('mouseleave', function () {
-        submenu.classList.remove('block');
-        triangle.classList.remove('block');
-    });
+    // var dropdown = document.querySelector('#dropdown');
+    // var submenu = document.querySelector('.submenu');
+    // var triangle = document.querySelector('.triangle');
+    //
+    //
+    // dropdown.addEventListener('mouseenter', function () {
+    //     submenu.classList.add('flex');
+    //     triangle.classList.add('block');
+    // });
+    //
+    // submenu.addEventListener('mouseleave', function () {
+    //     submenu.classList.remove('flex');
+    //     triangle.classList.remove('block');
+    // });
 
 
 
@@ -27,16 +27,20 @@ document.addEventListener('DOMContentLoaded', function(){
 
     box1.addEventListener('mouseover', function(){
         opacities[0].style.display ='none';
+        box1.className = "shadow";
     });
     box1.addEventListener('mouseout', function () {
         opacities[0].style.display = 'block';
+        box1.classList.remove('shadow');
     });
 
     box2.addEventListener('mouseover', function(){
         opacities[1].style.display ='none';
+        box2.className = "shadow";
     });
     box2.addEventListener('mouseout', function () {
         opacities[1].style.display = 'block';
+        box2.classList.remove('shadow');
     });
 
     //zadanie 3

@@ -1,10 +1,70 @@
-header .container .row {
-  display: flex;
-  flex-wrap: nowrap; }
-  header .container .row .col-3 {
-    overflow: hidden;
+header {
+  background-color: black;
+  color: white; }
+  header .container .row {
     display: flex;
     justify-content: center; }
+    header .container .row .col-3 {
+      display: flex;
+      justify-content: center; }
+    header .container .row .col-3:nth-of-type(3) {
+      display: flex;
+      justify-content: flex-start; }
+      header .container .row .col-3:nth-of-type(3) .menu {
+        display: flex;
+        flex-direction: column; }
+        header .container .row .col-3:nth-of-type(3) .menu li {
+          display: block;
+          list-style-type: none;
+          text-transform: uppercase; }
+          header .container .row .col-3:nth-of-type(3) .menu li a {
+            display: flex;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            padding: 5px; }
+            header .container .row .col-3:nth-of-type(3) .menu li a:hover {
+              background-color: white;
+              color: black; }
+        header .container .row .col-3:nth-of-type(3) .menu li:nth-of-type(2):hover .submenu {
+          display: flex;
+          flex-direction: column;
+          background-color: black; }
+        header .container .row .col-3:nth-of-type(3) .menu li:nth-of-type(2):hover .triangle {
+          display: block; }
+        header .container .row .col-3:nth-of-type(3) .menu li:nth-of-type(2) .submenu {
+          display: none; }
+          @media (min-width: 800px) {
+            header .container .row .col-3:nth-of-type(3) .menu li:nth-of-type(2) .submenu {
+              display: none;
+              position: absolute;
+              top: 70px;
+              text-align: center; } }
+          header .container .row .col-3:nth-of-type(3) .menu li:nth-of-type(2) .submenu li {
+            display: flex;
+            padding: 1em; }
+        @media (min-width: 800px) {
+          header .container .row .col-3:nth-of-type(3) .menu li:nth-of-type(2) .triangle {
+            width: 0;
+            height: 0;
+            border-left: 17px solid transparent;
+            border-right: 17px solid transparent;
+            border-bottom: 17px solid black;
+            position: absolute;
+            top: 55px;
+            display: none; } }
+        @media (min-width: 800px) {
+          header .container .row .col-3:nth-of-type(3) .menu li:nth-of-type(2) .empty {
+            position: absolute;
+            width: 7%;
+            top: 40px;
+            height: 5%;
+            background-color: transparent;
+            z-index: 1; } }
+      @media (min-width: 800px) {
+        header .container .row .col-3:nth-of-type(3) .menu {
+          flex-direction: row;
+          justify-content: space-between; } }
 
 .showcase {
   height: 800px;

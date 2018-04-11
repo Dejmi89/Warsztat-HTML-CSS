@@ -1,37 +1,143 @@
+////header {
+//  background-color:black;
+////  .container{
+////
+////    .row{
+////      display: flex;
+////      flex-wrap: nowrap;
+////      .col-3{
+////
+////      }
+////      .col-6{
+////
+////      }
+////      .col-3{
+////        overflow: hidden;
+////        display: flex;
+////        justify-content: center;
+////          .menu {
+////
+////            .wrapper {
+////                .triangle {
+////
+////                }
+////              .submenu {
+////
+////              }
+////            }
+////        }
+////      }
+////    }
+////  }
+////  .container:nth-of-type(2){
+////    .row{
+////      .col-9{
+////
+////      }
+////      .col-3{
+////        .menu{}
+////      }
+////    }
+////  }
+////}
+//
 header {
 
-  .container{
+  background-color: black;
+  color:white;
 
-    .row{
+  .container {
+    .row {
       display: flex;
-      flex-wrap: nowrap;
+      justify-content: center;
       .col-3{
-
-      }
-      .col-6{
-
-      }
-      .col-3{
-        overflow: hidden;
         display: flex;
         justify-content: center;
-          .menu {
 
-            .wrapper {
+      }
+
+      .col-3:nth-of-type(3){
+        display: flex;
+        justify-content: flex-start;
+        .menu{
+          display: flex;
+          flex-direction: column;
+          li{
+            display: block;
+            list-style-type: none;
+            text-transform: uppercase;
+
+            a {
+              display: flex;
+              text-align: center;
+              text-decoration: none;
+              color:white;
+              padding: 5px;
+
+              &:hover {
+                background-color: white;
+                color:black;
+              }
+            }
+          }
+          li:nth-of-type(2){
+
+            &:hover .submenu{
+              display: flex;
+              flex-direction: column;
+              background-color: black;
+            }
+            &:hover .triangle{
+              display: block;
+            }
+            .submenu {
+              display: none;
+              @media (min-width:800px){
+                display: none;
+                position: absolute;
+                top:70px;
+                text-align: center;
+              }
+
+              li {
+                display: flex;
+                padding:1em;
+
+              }
+            }
+            .triangle {
+              @media (min-width: 800px){
+                width: 0;
+                height: 0;
+                border-left: 17px solid transparent;
+                border-right: 17px solid transparent;
+                border-bottom: 17px solid black;
+                position: absolute;
+                top: 55px;
+                display: none;
+              }
 
             }
+            .empty {
+              @media (min-width: 800px) {
+                position: absolute;
+                width:7%;
+                top:40px;
+                height:5%;
+                background-color: transparent;
+                z-index: 1;
+              }
+            }
+          }
+        }
+        @media (min-width:800px){
+          .menu {
+            flex-direction: row;
+            justify-content: space-between;
+          }
         }
       }
     }
   }
-  .container:nth-of-type(2){
-    .row{
-      .col-9{
 
-      }
-      .col-3{
-        .menu{}
-      }
-    }
-  }
 }
