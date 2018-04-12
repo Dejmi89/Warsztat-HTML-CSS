@@ -74,9 +74,65 @@ document.addEventListener('DOMContentLoaded', function(){
         }
         sliderElements[pictureIndex].className = 'visible';
 
-    })
+    });
+
+    //Zadanie 4
+
+    var dropdowns = document.getElementsByClassName('drop_down_list');
+    var listPanels = document.getElementsByClassName('list_panel');
+    var application = document.querySelector('.application');
+    var checkboxInput = document.querySelector('#transport');
+    var label = document.getElementsByTagName('label');
+    console.log(label);
+
+    // application.addEventListener('click', function (e) {
+    //    e.preventDefault();
+    // });
 
 
+    checkboxInput.addEventListener('click', function () {
+        if (checkboxInput.checked === true){
+            label[0].style.color = "black";
+        }
+        else if (checkboxInput.checked === false){
+            label[0].style.color = "#cecece";
+        }
+    });
+
+
+    dropdowns[0].addEventListener('click', function (e) {
+        e.preventDefault();
+
+        if (listPanels[0].style.display === "block"){
+            listPanels[0].style.display = "none";
+        }
+        else {
+            listPanels[0].style.display = "block";
+        }
+
+    });
+
+    dropdowns[1].addEventListener('click', function (e) {
+        e.preventDefault();
+
+        if (listPanels[1].style.display === "block"){
+            listPanels[1].style.display = "none";
+        }
+        else {
+            listPanels[1].style.display = "block";
+        }
+    });
+
+    dropdowns[2].addEventListener('click', function (e) {
+        e.preventDefault();
+
+        if (listPanels[2].style.display === "block"){
+            listPanels[2].style.display = "none";
+        }
+        else {
+            listPanels[2].style.display = "block";
+        }
+    });
 });
 
 
