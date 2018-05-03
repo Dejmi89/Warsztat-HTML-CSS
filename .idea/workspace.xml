@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80a4fe33-0ea2-4a1d-8706-d0021701a795" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js.js" afterPath="$PROJECT_DIR$/js.js" />
-    </list>
+    <list default="true" id="80a4fe33-0ea2-4a1d-8706-d0021701a795" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -192,7 +189,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/POZ_FER_W_05_REACT_ES6" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v8.9.4/bin/node" />
   </component>
@@ -238,12 +235,12 @@
       <workItem from="1523306909450" duration="859000" />
       <workItem from="1523390757563" duration="536000" />
       <workItem from="1523461900038" duration="15516000" />
-      <workItem from="1523554342804" duration="5475000" />
+      <workItem from="1523554342804" duration="5627000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102720000" />
+    <option name="totallyTimeSpent" value="102872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="109" y="281" width="1621" height="828" extended-state="0" />
