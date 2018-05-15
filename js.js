@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function(){
     //Zadanie 4
 
     var dropdowns = document.getElementsByClassName('drop_down_list');
-    var listPanels = document.getElementsByClassName('list_panel');
+    // var listPanels = document.getElementsByClassName('list_panel');
     var application = document.querySelector('.application');
     var checkboxInput = document.querySelector('#transport');
     var label = document.getElementsByTagName('label');
@@ -94,20 +94,7 @@ document.addEventListener('DOMContentLoaded', function(){
     // application.addEventListener('click', function (e) {
     //    e.preventDefault();
     // });
-    var chairPrices = {
-        Clair: '200',
-        Margarita: '300',
-        Selena: '500'
-    }
-    var colorsPrices = {
-        Red: '50',
-        Black: '80',
-        Orange: ' 120'
-    }
-    var materialsPrices = {
-        fabric: '100',
-        leather: '400'
-    }
+
 
     checkboxInput.addEventListener('click', function () {
         if (checkboxInput.checked === true){
@@ -124,150 +111,206 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     
+    for (var i = 0; i<dropdowns.length; i++){
+        dropdowns[i].addEventListener('click', function (e) {
+            e.preventDefault();
+            let panel = this.querySelector ('.list_panel');
+
+            if (panel.style.display === 'block'){
+                panel.style.display = 'none';
+            }
+            else {
+                panel.style.display = 'block';
+            }
+            
+            let panelsChildren = panel.children;
+
+            for (var j = 0; j<panelsChildren.length; j++){
+                panelsChildren[j].addEventListener('click', function (e) {
+                    e.preventDefault();
+                    let colorInfo = panel_left.querySelector('.color') ;
+                    let patternInfo = panel_left.querySelector('.pattern') ;
+
+                   if (this.dataset.type === 'armchair'){
+                    headingLeft.innerText = this.innerText;
+                    headingRight.innerText = this.dataset.price;
+                   }
+                   else if(this.dataset.type === 'color'){
+                    colorInfo.innerText = this.innerText;
+                   }
+
+                   else if(this.dataset.type === 'pattern'){
+                    patternInfo.innerText = this.innerText;
+                   }
+                                
+
+                    
+                    
+                    
+                    
+                    console.log(patternInfo);
+                  })
+
+                panelsChildren[j].addEventListener('mouseenter', function (e) {
+                    this.style.background = 'green';
+                })
+                panelsChildren[j].addEventListener('mouseleave', function (e) {
+                    this.style.background = 'none';
+                })
+            }
+            
+            
+
+                
+                
+            
+            
+          })
+    }
     
     
 
 
-    dropdowns[0].addEventListener('click', function (e) {
-        e.preventDefault();
+    // dropdowns[0].addEventListener('click', function (e) {
+    //     e.preventDefault();
 
-        if (listPanels[0].style.display === "block"){
-            listPanels[0].style.display = "none";
-        }
-        else {
-            listPanels[0].style.display = "block";
+    //     if (listPanels[0].style.display === "block"){
+    //         listPanels[0].style.display = "none";
+    //     }
+    //     else {
+    //         listPanels[0].style.display = "block";
              
 
-            var li = listPanels[0].firstElementChild;
-            li.addEventListener('click', function () { 
-                headingLeft.innerText = li.innerText;
-                headingRight.innerText = chairPrices.Clair;
-             })
-             li.addEventListener('mouseenter', function () { 
-                li.style.background = 'red';
-             })
-             li.addEventListener('mouseleave', function () { 
-                li.style.background = 'none';
-             })
+    //         var li = listPanels[0].firstElementChild;
+    //         li.addEventListener('click', function () { 
+    //             headingLeft.innerText = li.innerText;
+    //             headingRight.innerText = chairPrices.Clair;
+    //          })
+    //          li.addEventListener('mouseenter', function () { 
+    //             li.style.background = 'red';
+    //          })
+    //          li.addEventListener('mouseleave', function () { 
+    //             li.style.background = 'none';
+    //          })
 
-             var li2 = listPanels[0].children;
+    //          var li2 = listPanels[0].children;
              
-            li2[1].addEventListener('click', function () { 
-                headingLeft.innerText = li2[1].innerText;
-                headingRight.innerText = chairPrices.Margarita;
-             })
-             li2[1].addEventListener('mouseenter', function () { 
-                li2[1].style.background = 'red';
-             })
-             li2[1].addEventListener('mouseleave', function () { 
-                li2[1].style.background = 'none';
-             })
+    //         li2[1].addEventListener('click', function () { 
+    //             headingLeft.innerText = li2[1].innerText;
+    //             headingRight.innerText = chairPrices.Margarita;
+    //          })
+    //          li2[1].addEventListener('mouseenter', function () { 
+    //             li2[1].style.background = 'red';
+    //          })
+    //          li2[1].addEventListener('mouseleave', function () { 
+    //             li2[1].style.background = 'none';
+    //          })
 
-             var li3 = listPanels[0].lastElementChild;
+    //          var li3 = listPanels[0].lastElementChild;
              
-             li3.addEventListener('click', function () { 
-                 headingLeft.innerText = li3.innerText;
-                 headingRight.innerText = chairPrices.Selena;
-              })
-              li3.addEventListener('mouseenter', function () { 
-                 li3.style.background = 'red';
-              })
-              li3.addEventListener('mouseleave', function () { 
-                 li3.style.background = 'none';
-              })
-        }
+    //          li3.addEventListener('click', function () { 
+    //              headingLeft.innerText = li3.innerText;
+    //              headingRight.innerText = chairPrices.Selena;
+    //           })
+    //           li3.addEventListener('mouseenter', function () { 
+    //              li3.style.background = 'red';
+    //           })
+    //           li3.addEventListener('mouseleave', function () { 
+    //              li3.style.background = 'none';
+    //           })
+    //     }
 
-    });
+    // });
 
-    dropdowns[1].addEventListener('click', function (e) {
-        e.preventDefault();
+    // dropdowns[1].addEventListener('click', function (e) {
+    //     e.preventDefault();
 
-        if (listPanels[1].style.display === "block"){
-            listPanels[1].style.display = "none";
-        }
-        else {
-            listPanels[1].style.display = "block";
+    //     if (listPanels[1].style.display === "block"){
+    //         listPanels[1].style.display = "none";
+    //     }
+    //     else {
+    //         listPanels[1].style.display = "block";
             
-            var li = listPanels[1].firstElementChild;
-            var color = document.querySelector('.color');
-            var colorValue = document.querySelector('.color_value');
+    //         var li = listPanels[1].firstElementChild;
+    //         var color = document.querySelector('.color');
+    //         var colorValue = document.querySelector('.color_value');
            
             
-            li.addEventListener('click', function () { 
-                color.innerText = li.innerText;
-                colorValue.innerText = colorsPrices.Red;
-             })
-             li.addEventListener('mouseenter', function () { 
-                li.style.background = 'red';
-             })
-             li.addEventListener('mouseleave', function () { 
-                li.style.background = 'none';
-             })
+    //         li.addEventListener('click', function () { 
+    //             color.innerText = li.innerText;
+    //             colorValue.innerText = colorsPrices.Red;
+    //          })
+    //          li.addEventListener('mouseenter', function () { 
+    //             li.style.background = 'red';
+    //          })
+    //          li.addEventListener('mouseleave', function () { 
+    //             li.style.background = 'none';
+    //          })
 
-             var li2 = listPanels[1].children;
-             li2[1].addEventListener('click', function () { 
-                color.innerText = li2[1].innerText;
-                colorValue.innerText = colorsPrices.Black;
-             })
-             li2[1].addEventListener('mouseenter', function () { 
-                li2[1].style.background = 'red';
-             })
-             li2[1].addEventListener('mouseleave', function () { 
-                li2[1].style.background = 'none';
-             })
+    //          var li2 = listPanels[1].children;
+    //          li2[1].addEventListener('click', function () { 
+    //             color.innerText = li2[1].innerText;
+    //             colorValue.innerText = colorsPrices.Black;
+    //          })
+    //          li2[1].addEventListener('mouseenter', function () { 
+    //             li2[1].style.background = 'red';
+    //          })
+    //          li2[1].addEventListener('mouseleave', function () { 
+    //             li2[1].style.background = 'none';
+    //          })
 
-             var li3 = listPanels[1].lastElementChild;
-             li3.addEventListener('click', function () { 
-                color.innerText = li3.innerText;
-                colorValue.innerText = colorsPrices.Black;
-             })
-             li3.addEventListener('mouseenter', function () { 
-                li3.style.background = 'red';
-             })
-             li3.addEventListener('mouseleave', function () { 
-                li3.style.background = 'none';
-             })
-        }
-    });
+    //          var li3 = listPanels[1].lastElementChild;
+    //          li3.addEventListener('click', function () { 
+    //             color.innerText = li3.innerText;
+    //             colorValue.innerText = colorsPrices.Black;
+    //          })
+    //          li3.addEventListener('mouseenter', function () { 
+    //             li3.style.background = 'red';
+    //          })
+    //          li3.addEventListener('mouseleave', function () { 
+    //             li3.style.background = 'none';
+    //          })
+    //     }
+    // });
 
-    dropdowns[2].addEventListener('click', function (e) {
-        e.preventDefault();
+    // dropdowns[2].addEventListener('click', function (e) {
+    //     e.preventDefault();
 
-        if (listPanels[2].style.display === "block"){
-            listPanels[2].style.display = "none";
-        }
-        else {
-            listPanels[2].style.display = "block";
+    //     if (listPanels[2].style.display === "block"){
+    //         listPanels[2].style.display = "none";
+    //     }
+    //     else {
+    //         listPanels[2].style.display = "block";
 
-            var li = listPanels[2].firstElementChild;
-            var pattern = document.querySelector('.pattern');
-            var patternValue = document.querySelector('.pattern_value');
+    //         var li = listPanels[2].firstElementChild;
+    //         var pattern = document.querySelector('.pattern');
+    //         var patternValue = document.querySelector('.pattern_value');
            
             
-            li.addEventListener('click', function () { 
-                pattern.innerText = li.innerText;
-                patternValue.innerText = materialsPrices.fabric;
-             })
-             li.addEventListener('mouseenter', function () { 
-                li.style.background = 'red';
-             })
-             li.addEventListener('mouseleave', function () { 
-                li.style.background = 'none';
-             })
+    //         li.addEventListener('click', function () { 
+    //             pattern.innerText = li.innerText;
+    //             patternValue.innerText = materialsPrices.fabric;
+    //          })
+    //          li.addEventListener('mouseenter', function () { 
+    //             li.style.background = 'red';
+    //          })
+    //          li.addEventListener('mouseleave', function () { 
+    //             li.style.background = 'none';
+    //          })
 
-             var li2 = listPanels[2].children;
-             li2[1].addEventListener('click', function () { 
-                pattern.innerText = li2[1].innerText;
-                patternValue.innerText = materialsPrices.leather;
-             })
-             li2[1].addEventListener('mouseenter', function () { 
-                li2[1].style.background = 'red';
-             })
-             li2[1].addEventListener('mouseleave', function () { 
-                li2[1].style.background = 'none';
-             })
-        }
-    });
+    //          var li2 = listPanels[2].children;
+    //          li2[1].addEventListener('click', function () { 
+    //             pattern.innerText = li2[1].innerText;
+    //             patternValue.innerText = materialsPrices.leather;
+    //          })
+    //          li2[1].addEventListener('mouseenter', function () { 
+    //             li2[1].style.background = 'red';
+    //          })
+    //          li2[1].addEventListener('mouseleave', function () { 
+    //             li2[1].style.background = 'none';
+    //          })
+    //     }
+    // });
 });
 
 
