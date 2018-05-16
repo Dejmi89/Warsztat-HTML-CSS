@@ -79,37 +79,34 @@ document.addEventListener('DOMContentLoaded', function(){
     //Zadanie 4
 
     var dropdowns = document.getElementsByClassName('drop_down_list');
-    // var listPanels = document.getElementsByClassName('list_panel');
-    var application = document.querySelector('.application');
-    var checkboxInput = document.querySelector('#transport');
-    var label = document.getElementsByTagName('label');
+    var checkboxInput = document.getElementById('transport');
 
     var sum = document.querySelector('.sum');
     var panel_left = document.querySelector('.panel_left');
     var panel_right = document.querySelector('.panel_right');
     var headingLeft = panel_left.firstElementChild;
     var headingRight = panel_right.firstElementChild;
-    console.log(headingLeft);
+    var transport = panel_left.querySelector('.transport');
+    var transportValue = panel_right.querySelector('.transport_value');
+    
 
-    // application.addEventListener('click', function (e) {
-    //    e.preventDefault();
-    // });
-
-
-    checkboxInput.addEventListener('click', function () {
+    checkboxInput.addEventListener('click', function (e) {  
+        e.preventDefault();
         if (checkboxInput.checked === true){
-            label[0].style.color = "black";
+            console.log('checked');
         }
-        else if (checkboxInput.checked === false){
-            label[0].style.color = "#cecece";
+        else {
+            console.log('not checked');
         }
-    });
+        
 
-    if (checkboxInput.checked === true){
-        var transport = document.getElementById('#transport');
-        transport.innerText = '80';
-    }
 
+    })
+    
+
+    
+   
+    
     
     for (var i = 0; i<dropdowns.length; i++){
         dropdowns[i].addEventListener('click', function (e) {
@@ -124,31 +121,43 @@ document.addEventListener('DOMContentLoaded', function(){
             }
             
             let panelsChildren = panel.children;
+            
 
             for (var j = 0; j<panelsChildren.length; j++){
+                
                 panelsChildren[j].addEventListener('click', function (e) {
                     e.preventDefault();
                     let colorInfo = panel_left.querySelector('.color') ;
                     let patternInfo = panel_left.querySelector('.pattern') ;
+                    let colorValue = panel_right.querySelector('.color_value');
+                    let patternValue = panel_right.querySelector('.pattern_value');
+                    
 
                    if (this.dataset.type === 'armchair'){
                     headingLeft.innerText = this.innerText;
                     headingRight.innerText = this.dataset.price;
+                    
+                    
                    }
                    else if(this.dataset.type === 'color'){
                     colorInfo.innerText = this.innerText;
+                    colorValue.innerText = this.dataset.price;
+
+                    
                    }
 
                    else if(this.dataset.type === 'pattern'){
                     patternInfo.innerText = this.innerText;
-                   }
-                                
+                    patternValue.innerText = this.dataset.price;
 
                     
-                    
-                    
-                    
-                    console.log(patternInfo);
+                   }
+                   count =   Number(headingRight.innerText);
+                   count1 =  Number(colorValue.innerText);
+                   count2 =  Number(patternValue.innerText);
+
+                   
+                    sum.innerText = count+count1+count2;
                   })
 
                 panelsChildren[j].addEventListener('mouseenter', function (e) {
@@ -158,6 +167,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     this.style.background = 'none';
                 })
             }
+            
             
             
 
@@ -170,147 +180,6 @@ document.addEventListener('DOMContentLoaded', function(){
     
     
 
-
-    // dropdowns[0].addEventListener('click', function (e) {
-    //     e.preventDefault();
-
-    //     if (listPanels[0].style.display === "block"){
-    //         listPanels[0].style.display = "none";
-    //     }
-    //     else {
-    //         listPanels[0].style.display = "block";
-             
-
-    //         var li = listPanels[0].firstElementChild;
-    //         li.addEventListener('click', function () { 
-    //             headingLeft.innerText = li.innerText;
-    //             headingRight.innerText = chairPrices.Clair;
-    //          })
-    //          li.addEventListener('mouseenter', function () { 
-    //             li.style.background = 'red';
-    //          })
-    //          li.addEventListener('mouseleave', function () { 
-    //             li.style.background = 'none';
-    //          })
-
-    //          var li2 = listPanels[0].children;
-             
-    //         li2[1].addEventListener('click', function () { 
-    //             headingLeft.innerText = li2[1].innerText;
-    //             headingRight.innerText = chairPrices.Margarita;
-    //          })
-    //          li2[1].addEventListener('mouseenter', function () { 
-    //             li2[1].style.background = 'red';
-    //          })
-    //          li2[1].addEventListener('mouseleave', function () { 
-    //             li2[1].style.background = 'none';
-    //          })
-
-    //          var li3 = listPanels[0].lastElementChild;
-             
-    //          li3.addEventListener('click', function () { 
-    //              headingLeft.innerText = li3.innerText;
-    //              headingRight.innerText = chairPrices.Selena;
-    //           })
-    //           li3.addEventListener('mouseenter', function () { 
-    //              li3.style.background = 'red';
-    //           })
-    //           li3.addEventListener('mouseleave', function () { 
-    //              li3.style.background = 'none';
-    //           })
-    //     }
-
-    // });
-
-    // dropdowns[1].addEventListener('click', function (e) {
-    //     e.preventDefault();
-
-    //     if (listPanels[1].style.display === "block"){
-    //         listPanels[1].style.display = "none";
-    //     }
-    //     else {
-    //         listPanels[1].style.display = "block";
-            
-    //         var li = listPanels[1].firstElementChild;
-    //         var color = document.querySelector('.color');
-    //         var colorValue = document.querySelector('.color_value');
-           
-            
-    //         li.addEventListener('click', function () { 
-    //             color.innerText = li.innerText;
-    //             colorValue.innerText = colorsPrices.Red;
-    //          })
-    //          li.addEventListener('mouseenter', function () { 
-    //             li.style.background = 'red';
-    //          })
-    //          li.addEventListener('mouseleave', function () { 
-    //             li.style.background = 'none';
-    //          })
-
-    //          var li2 = listPanels[1].children;
-    //          li2[1].addEventListener('click', function () { 
-    //             color.innerText = li2[1].innerText;
-    //             colorValue.innerText = colorsPrices.Black;
-    //          })
-    //          li2[1].addEventListener('mouseenter', function () { 
-    //             li2[1].style.background = 'red';
-    //          })
-    //          li2[1].addEventListener('mouseleave', function () { 
-    //             li2[1].style.background = 'none';
-    //          })
-
-    //          var li3 = listPanels[1].lastElementChild;
-    //          li3.addEventListener('click', function () { 
-    //             color.innerText = li3.innerText;
-    //             colorValue.innerText = colorsPrices.Black;
-    //          })
-    //          li3.addEventListener('mouseenter', function () { 
-    //             li3.style.background = 'red';
-    //          })
-    //          li3.addEventListener('mouseleave', function () { 
-    //             li3.style.background = 'none';
-    //          })
-    //     }
-    // });
-
-    // dropdowns[2].addEventListener('click', function (e) {
-    //     e.preventDefault();
-
-    //     if (listPanels[2].style.display === "block"){
-    //         listPanels[2].style.display = "none";
-    //     }
-    //     else {
-    //         listPanels[2].style.display = "block";
-
-    //         var li = listPanels[2].firstElementChild;
-    //         var pattern = document.querySelector('.pattern');
-    //         var patternValue = document.querySelector('.pattern_value');
-           
-            
-    //         li.addEventListener('click', function () { 
-    //             pattern.innerText = li.innerText;
-    //             patternValue.innerText = materialsPrices.fabric;
-    //          })
-    //          li.addEventListener('mouseenter', function () { 
-    //             li.style.background = 'red';
-    //          })
-    //          li.addEventListener('mouseleave', function () { 
-    //             li.style.background = 'none';
-    //          })
-
-    //          var li2 = listPanels[2].children;
-    //          li2[1].addEventListener('click', function () { 
-    //             pattern.innerText = li2[1].innerText;
-    //             patternValue.innerText = materialsPrices.leather;
-    //          })
-    //          li2[1].addEventListener('mouseenter', function () { 
-    //             li2[1].style.background = 'red';
-    //          })
-    //          li2[1].addEventListener('mouseleave', function () { 
-    //             li2[1].style.background = 'none';
-    //          })
-    //     }
-    // });
 });
 
 
